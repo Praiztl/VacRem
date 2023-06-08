@@ -1,0 +1,225 @@
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+
+/**
+* Desktop Navigation 
+*/
+
+.menu {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: left;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: left;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a,
+.menu a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    color: #4e4039;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.menu a i,
+.menu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.menu a:hover,
+.menu .active,
+.menu .active:focus,
+.menu li:hover>a {
+    color: #007cba;
+}
+
+
+/**
+  * Mobile Navigation 
+  */
+
+.mobile-nav-toggle {
+    color: #7a6960;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+    .menu ul {
+        display: none;
+    }
+}
+
+.menu-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(78, 64, 57, 0.9);
+    transition: 0.3s;
+}
+
+.menu-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.menu-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.menu-mobile a,
+.menu-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #7a6960;
+}
+
+.menu-mobile a:hover,
+.menu-mobile .active,
+.menu-mobile li:hover>a {
+    color: #007cba;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu End
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.welcome-section {
+    background-color: #007cba;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-img {
+    background-color: #007cba;
+    color: #fff;
+    padding: 40px 0;
+    border-image: 10px;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.segment {
+    height: 33vh;
+}
+
+.segment:nth-child(odd) {
+    background-color: #fff;
+}
+
+.segment:nth-child(even) {
+    background-color: #000;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 10px;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20;
+    text-align: center;
+}

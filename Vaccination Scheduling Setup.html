@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Scheduling Setup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .menu ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: left;
+        }
+        
+        .menu li {
+            position: relative;
+        }
+        
+        .menu a,
+        .menu a:focus {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .menu a i,
+        .menu a:focus i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 5px;
+        }
+        
+        .menu a:hover,
+        .menu .active,
+        .menu .active:focus,
+        .menu li:hover>a {
+            color: #007cba;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+        
+        .form-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .form-field {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-button {
+            padding: 10px 20px;
+            background-color: #007cba;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .form-button:hover {
+            background-color: #007cba;
+        }
+        
+        .message-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .reminder-list {
+            margin-top: 30px;
+        }
+        
+        .reminder-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .reminder-item .vaccine-name {
+            font-weight: bold;
+        }
+        
+        .reminder-item .vaccine-dates {
+            font-style: italic;
+        }
+        
+        .reminder-item .reschedule-link {
+            color: #007cba;
+            text-decoration: none;
+        }
+        
+        .reschedule-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">Vaccination Scheduling Setup</h1>
+        <div class="form-container">
+            <h2 class="form-title">Schedule Vaccination</h2>
+            <form>
+                <div class="form-field">
+                    <label class="form-label" for="vaccine-name">Vaccine Name</label>
+                    <input class="form-input" type="text" id="vaccine-name" required>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="vaccine-dates">Vaccination
+                        Dates</label>
+                    <input class="form-input" type="text" id="vaccine-dates" required>
+                </div>
+                <div class="form-field">
+                    <input class="form-button" type="submit" value="Schedule">
+                </div>
+            </form>
+            <div class="reminder-list">
+                <h2 class="form-title">Vaccination Reminders</h2>
+                <div class="reminder-item">
+                    <div>
+                        <span class="vaccine-name">Polio Vaccine</span>
+                        <span class="vaccine-dates">Dose 1: 01/05/2023, Dose 2: 01/28/2023</span>
+                    </div>
+                    <a class="reschedule-link" href="#">Reschedule</a>
+                </div>
+                <div class="reminder-item">
+                    <div>
+                        <span class="vaccine-name">MMR Vaccine</span>
+                        <span class="vaccine-dates">Dose 1: 02/10/2023, Dose 2: 03/05/2023</span>
+                    </div>
+                    <a class="reschedule-link" href="#">Reschedule</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1 class="page-title">Automated Text Message Setup</h1>
+        <div class="message-form">
+            <h2 class="form-title">Reminder Message Setting</h2>
+            <form>
+                <div class="form-field">
+                    <label class="form-label" for="message-en">Customize Message</label>
+                    <textarea class="form-textarea" id="message-en" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <button class="form-button" type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

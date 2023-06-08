@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include Google Sign-In API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Custom styles -->
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            background-image: url('assets/img/imgB.jpg');
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            float: center;
+        }
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo i {
+            font-size: 48px;
+            color: #007cba;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="username"],
+        input[type="password"],
+        input[type="Confirm password"],
+        input[type="email"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            color: #333;
+        }
+        
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007cba;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #006ba1;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer a:hover {
+            color: #007cba;
+        }
+        
+        .mylogo {
+            color: #007cba;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mylogo">
+            <img src="assets/img/faviconR.png"></a>
+        </div>
+        <h1>Create your Vac.Rem Account</h1>
+        <form id="signup-form" action="#" method="POST">
+            <input type="username" id="username" name="username" placeholder="Username" required>
+            <input type="email" <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="Confirm password" id="Confirm password" name="Confirm password" placeholder="Confirm Password" required>
+            <input type="submit" name="signup" value="Get Started">
+            <div class="footer">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Google Sign-In Button -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <script>
+        // Function called when the Google Sign-In API successfully authenticates the user
+        function onSignIn(googleUser) {
+            // Get the user's ID token and basic profile information
+            var idToken = googleUser.getAuthResponse().id_token;
+            var profile = googleUser.getBasicProfile();
+
+            // Send the ID token to the server for verification and user account creation
+            $.ajax({
+                type: 'POST',
+                url: '/create-account', // Replace with your server-side endpoint for account creation
+                data: {
+                    idToken: idToken,
+                    email: profile.getEmail(),
+                    name: profile.getName()
+                },
+                success: function(response) {
+                    // Handle the server response after account creation
+                    console.log(response);
+                },
+                error: function(xhr, status, error) {
+                    // Handle any error that occurs during the AJAX request
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Analysis Setup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            background-image: url('doc1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .filter-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .form-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .form-field {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-button {
+            padding: 10px 20px;
+            background-color: #007cba;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .form-button:hover {
+            background-color: #007cba;
+        }
+        
+        .reminder-list {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        
+        .reminder-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .reminder-item:last-child {
+            border-bottom: none;
+        }
+        
+        .client-name {
+            font-weight: bold;
+        }
+        
+        .client-status {
+            font-style: italic;
+        }
+        
+        .filter-field {
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-input {
+            margin-right: 10px;
+        }
+        
+        .filter-button {
+            background-color: #ccc;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">Reminder Analysis Setup</h1>
+        <div class="filter-form">
+            <h2 class="form-title">Filter Reminders</h2>
+            <form>
+                <div class="form-field">
+                    <label class="form-label" for="client-name">Client Name</label>
+                    <input class="form-input" type="text" id="client-name">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="vaccination-status">Vaccination Status</label>
+                    <select class="form-input" id="vaccination-status">
+                <option value="">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                </select>
+                </div>
+                <div class="form-field">
+                    <button class="form-button filter-button" type="submit">Filter</button>
+                </div>
+            </form>
+        </div>
+        <div class="reminder-list">
+            <h2 class="form-title">Vaccination Reminders</h2>
+            <div class="reminder-item">
+                <div>
+                    <span class="client-name">John Doe</span>
+                    <span class="client-status">Status: Pending</span>
+                </div>
+                <a class="reschedule-link" href="#">Reschedule</a>
+            </div>
+            <div class="reminder-item">
+                <div>
+                    <span class="client-name">Jane Smith</span>
+                    <span class="client-status">Status: Completed</span>
+                </div>
+                <a class="reschedule-link" href="#">Reschedule</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

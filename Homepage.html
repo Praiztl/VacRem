@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Vaccination Management System</title>
+    <link rel="stylesheet" href="hompage_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: gradient(to right, #002aff, #ffffff);
+            opacity: 0.3;
+        }
+        
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-seriff;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .card-icon {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #007cba;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .card-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .card-link {
+            color: #007cba;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .card-link:hover {
+            color: #007cba;
+        }
+        
+        #header {
+            background-color: #ffffff;
+            padding: 10px;
+            width: 100%;
+            z-index: 997;
+            transition: all 0.5s;
+        }
+        
+        #header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        #header {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #html,
+        #body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <section>
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
+                <nav id="menu" class="menu">
+                    <ul>
+                        <li><a href="Client’s registration and list setup.html">Client Information</a></li>
+                        <li><a href="Vaccination Scheduling Setup.html">Vaccination Scheduling</a></li>
+                        <li><a href="Reminder Analysis Setup.html">Reminder Analysis</a></li>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <!-- End Header -->
+
+    <section class="welcome-section">
+        <div class="container">
+            <h1>Welcome to our Vaccination Reminder System!</h1>
+            <p>We understand the importance of keeping track of your vaccination schedule and ensuring the well-being of you and your loved ones. Our system is designed to provide you with a seamless experience, making it easier than ever to stay on top
+                of your vaccination appointments.</p>
+            <p>With our Vaccination Reminder System, you can say goodbye to missed vaccinations and enjoy the peace of mind that comes with being up to date on your immunizations. We provide a user-friendly interface that allows you to manage your vaccination
+                schedule effortlessly, ensuring that you never overlook an important appointment again.</p>
+        </div>
+    </section>
+
+    <div>
+        <h1 class="page-title">Smart Vaccination Management System</h1>
+    </div>
+
+
+    <div class="card-container">
+        <div class="card">
+            <i class="fas fa-users card-icon"></i>
+            <h2 class="card-title">Client Information Management</h2>
+            <p class="card-description">Manage caregivers and their infants' socio-demographic and health-related information.</p>
+            <a class="card-link" href="Client’s registration and list setup.html">Go to Page</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-calendar-alt card-icon"></i>
+            <h2 class="card-title">Vaccination Scheduling Setup</h2>
+            <p class="card-description">Manage the automatic scheduling of vaccination visits based on infants' date of birth.</p>
+            <a class="card-link" href="Vaccination Scheduling Setup.html">Go to Page</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-bell card-icon"></i>
+            <h2 class="card-title">Reminder Setup</h2>
+            <p class="card-description">View message and vaccination status, manage and edit automated text messages for reminders and notifications</p>
+            <a class="card-link" href="Reminder Analysis Setup.html">Go to Page</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-home card-icon"></i>
+            <h2 class="card-title">Homepage</h2>
+            <p class="card-description">Return to the homepage for easy navigation. </p>
+            <a class="card-link" href="index.html">Go to Page</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-sign-out-alt card-icon"></i>
+            <h2 class="card-title">Logout</h2>
+            <p class="card-description">Logout from the smart vaccination management system. </p>
+            <a class="card-link" href="logout.html">Go to Page</a>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2023 Vacc.Rem. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
